@@ -11,6 +11,8 @@
 		BDFE7F0C2A46AB81003547B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE7F0B2A46AB81003547B7 /* ContentView.swift */; };
 		BDFE7F0E2A46AB83003547B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDFE7F0D2A46AB83003547B7 /* Assets.xcassets */; };
 		BDFE7F112A46AB83003547B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDFE7F102A46AB83003547B7 /* Preview Assets.xcassets */; };
+		BDFE7F192A46ABE7003547B7 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE7F172A46ABE7003547B7 /* ImageSaver.swift */; };
+		BDFE7F1A2A46ABE7003547B7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE7F182A46ABE7003547B7 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		BDFE7F0B2A46AB81003547B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BDFE7F0D2A46AB83003547B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDFE7F102A46AB83003547B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BDFE7F172A46ABE7003547B7 /* ImageSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		BDFE7F182A46ABE7003547B7 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 		BDFE7F082A46AB81003547B7 /* InstaFilter */ = {
 			isa = PBXGroup;
 			children = (
+				BDFE7F182A46ABE7003547B7 /* ImagePicker.swift */,
+				BDFE7F172A46ABE7003547B7 /* ImageSaver.swift */,
 				BDFE7F092A46AB81003547B7 /* InstaFilterApp.swift */,
 				BDFE7F0B2A46AB81003547B7 /* ContentView.swift */,
 				BDFE7F0D2A46AB83003547B7 /* Assets.xcassets */,
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDFE7F0C2A46AB81003547B7 /* ContentView.swift in Sources */,
+				BDFE7F1A2A46ABE7003547B7 /* ImagePicker.swift in Sources */,
+				BDFE7F192A46ABE7003547B7 /* ImageSaver.swift in Sources */,
 				BDFE7F0A2A46AB81003547B7 /* InstaFilterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

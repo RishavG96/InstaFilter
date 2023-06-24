@@ -8,14 +8,65 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var image: Image?
+    @State private var filterIntensity = 0.5
+    
+    @State private var showingImagePicker = false
+    @State private var inputImage: UIImage?
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                ZStack {
+                    Rectangle()
+                        .fill(.secondary)
+                    
+                    Text("Tap to select a picture")
+                        .foregroundColor(.white)
+                        .font(.headline)
+                    
+                    image?
+                        .resizable()
+                        .scaledToFit()
+                }
+                .onTapGesture {
+                    showingImagePicker = true
+                }
+                
+                HStack {
+                    Text("Intensity")
+                    Slider(value: $filterIntensity)
+                }
+                .padding(.vertical)
+                
+                HStack {
+                    Button("Change Filter") {
+                        // change filter
+                    }
+                    
+                    Spacer()
+                    
+                    Button("Save", action: save)
+                }
+            }
+            .padding([.horizontal, .bottom])
+            .navigationTitle("InstaFilter")
+            .onChange(of: inputImage) { _ in loadImage() }
+            .sheet(isPresented: $showingImagePicker) {
+                ImagePicker(image: $inputImage)
+            }
         }
-        .padding()
+    }
+    
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        
+        image = Image(uiImage: inputImage)
+    }
+    
+    func save() {
+        
     }
 }
 
